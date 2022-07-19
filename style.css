@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #151433;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100hv;
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 320px;
+    border-radius: 30px;
+    min-height: 520px;
+    margin: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right:1px solid rgba(255, 255, 255, 0.2) ;
+    border-bottom:1px solid rgba(255, 255, 255, 0.2) ;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.container .box:hover{
+    transform: translateY(-20px);
+}
+.container .box:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(870px);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .box:hover::before{
+    transform: skewX(45deg) translateX(-870px);
+}
+.container .box .title .fa{
+    margin-top: 20px;
+    font-size: 40px;
+    color: #fff;
+}
+.container .box .title h2{
+    color: #fff;
+    margin: 20px 0 0;
+    padding: 0;
+}
+.container .box .price h4{
+    font-size: 60px;
+    color: #fff;
+    margin: 10px 0;
+    padding: 0;
+}
+
+
+.container .box .option ul{
+    margin: 20px 0;
+    padding: 0;
+}
+.container .box .option ul{
+    list-style: none;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.container .box .option ul li i{
+    margin-right: 10px;
+}
+.container .box .option ul li:last-child{
+    border-bottom: none;
+}
+.container .box a:hover{
+    padding: 10px;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    transition: 0.5s;
+}
+.container .box a{
+    padding: 10xp;
+    text-decoration: none;
+    color:#fff;
+    border: 0px solid #fff;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+@media(max-width:900px){
+    section{
+        height: auto;
+    }
+}
+
+
